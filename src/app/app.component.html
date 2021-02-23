@@ -5,7 +5,9 @@
 <p>Board Game :</p>
 
 <div *ngFor="let tempBaris of boardGame">
-	{{tempBaris}}
+	<div *ngFor="let data of tempBaris" style="display : inline">
+		{{data}}
+	</div>
 </div>
 
 <div *ngIf="myCounter % 2 == 0">
@@ -18,3 +20,8 @@
 Baris : <input type="number" [(ngModel)]="baris"/>
   Kolom : <input type="number" [(ngModel)]="kolom"/>
 <button (click)="isKlik()">Submit</button>
+
+<div>
+	<p *ngIf="win1"> Player 1 win</p>
+	<p *ngIf="win2"> Player 2 win</p>
+</div>
