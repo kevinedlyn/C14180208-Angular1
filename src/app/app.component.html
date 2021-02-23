@@ -1,4 +1,20 @@
-<hello name="{{ name }}"></hello>
+<hello name="Kevin Edlyn - C14180208"></hello>
 <p>
-  Start editing to see some magic happen :)
+	Program 4 sama
 </p>
+<p>Board Game :</p>
+
+<div *ngFor="let tempBaris of boardGame">
+	{{tempBaris}}
+</div>
+
+<div *ngIf="myCounter % 2 == 0">
+	<p>Player 1</p>
+</div>
+<div *ngIf="myCounter % 2 != 0">
+	<p>Player 2</p>
+</div>
+<p>Input : </p>
+Baris : <input type="number" [(ngModel)]="baris"/>
+  Kolom : <input type="number" [(ngModel)]="kolom"/>
+<button (click)="isKlik()">Submit</button>
